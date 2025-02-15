@@ -20,7 +20,7 @@ ENV AUTH=powerhub:powerhub \
     URI_PATH=""
 
 # Apt packages to install
-ENV PACKAGES "wget git python3-pip python3-magic mono-mcs gcc-mingw-w64-x86-64 gcc-mingw-w64-i686"
+ENV PACKAGES "wget git python3-pipx python3-magic mono-mcs gcc-mingw-w64-x86-64 gcc-mingw-w64-i686"
 
 RUN apt-get -y update && \
     apt-get install -y $PACKAGES && \
@@ -28,7 +28,7 @@ RUN apt-get -y update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m pip install powerhub
+RUN python3 -m pipx install powerhub
 
 RUN mkdir -p /root/.local/share/powerhub/modules && \
     cd /root/.local/share/powerhub/modules && \
