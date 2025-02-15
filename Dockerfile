@@ -20,7 +20,7 @@ ENV AUTH=powerhub:powerhub \
     URI_PATH=""
 
 # Apt packages to install
-ENV PACKAGES "wget git python3-pipx python3-magic mono-mcs gcc-mingw-w64-x86-64 gcc-mingw-w64-i686"
+ENV PACKAGES "wget git pipx python3-magic mono-mcs gcc-mingw-w64-x86-64 gcc-mingw-w64-i686"
 
 RUN apt-get -y update && \
     apt-get install -y $PACKAGES && \
