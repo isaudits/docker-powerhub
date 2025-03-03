@@ -1,5 +1,5 @@
 #FROM debian:stable
-FROM isaudits/msf:minimal
+FROM isaudits/msf:latest
 
 ENV LC_ALL C.UTF-8
 ENV STAGING_KEY=RANDOM
