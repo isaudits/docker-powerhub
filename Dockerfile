@@ -30,6 +30,8 @@ RUN apt-get -y update && \
 
 RUN python3 -m pipx install powerhub
 
+ENV PATH="/root/.local/bin:${PATH}"
+
 RUN mkdir -p /root/.local/share/powerhub/modules && \
     cd /root/.local/share/powerhub/modules && \
     wget https://github.com/BloodHoundAD/BloodHound/raw/master/Collectors/SharpHound.exe && \
